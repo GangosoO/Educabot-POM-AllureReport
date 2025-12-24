@@ -3,7 +3,7 @@
 
 Bienvenidos al script desarrollado para el equipo de Educabot.
 
-El presente documento tiene como objetivo proporcionar una guía técnica y estructurada para abordar las tareas y desafíos planteados en la prueba técnica. Para esta implementación se realizarán pruebas manuales automatizadas, enfocadas en la validación funcional, la detección temprana de defectos y la resolución de incidencias de software.
+El presente documento tiene como objetivo proporcionar una guía técnica y estructurada para abordar las tareas y desafíos planteados en la prueba técnica. Para esta implementación se realizarán pruebas manuales y automatizadas, enfocadas en la validación funcional, la detección temprana de defectos y la resolución de incidencias de software.
 
 El script ha sido diseñado bajo buenas prácticas de automatización, priorizando la eficiencia, la mantenibilidad y la escalabilidad, con el fin de facilitar su integración y reutilización en futuros flujos de trabajo. Asimismo, busca promover una colaboración efectiva con los distintos equipos involucrados en el proceso de desarrollo y aseguramiento de la calidad.
 
@@ -123,5 +123,5 @@ La configuración de Cypress se encuentra en `cypress.config.js`. Puedes modific
 ## 🎯 Próximos Pasos
 
 1. Ejecuta las pruebas usando los scripts disponibles: `npm run test-smoke`, `npm run test-regression`, etc.
-2. Crea nuev`````````````````````````os Page Objects en `cypress/support/POM/` siguiendo el patrón existente
+2. Crea nuevos Page Objects en `cypress/support/POM/` siguiendo el patrón existente
 3. Ajusta la configuración en `cypress.config.js` según tus necesidades
