@@ -1,0 +1,38 @@
+{
+  "name": "educabot",
+  "version": "1.0.0",
+  "description": "Proyecto en Cypress para educabot",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./allure-results",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headed": "cypress run --headed",
+    "test": "cypress open --browser chrome --e2e",
+    "test-all": "cypress run --spec 'cypress/e2e/**/*.cy.js' --browser chrome --headed --env allure=true",
+    "test-Login": "cypress run --spec 'cypress/e2e/UI/Inicio_de_sesión.cy.js' --browser chrome --headed --env allure=true",
+    "test-Carrito": "cypress run --spec 'cypress/e2e/UI/Carrito_de_compras.cy.js' --browser chrome --headed --env allure=true",
+    "allure-regression-report": "cypress run --spec 'cypress/e2e/UI/Carrito_de_compras.cy.js' --browser chrome --headed --env allure=true",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "test-api": "cypress run --spec 'cypress/e2e/api/sauceDemo.cy.js' --browser chrome --headed --env allure=true",
+    "test-smoke": "cypress run --spec 'cypress/e2e/Smoke/Smoke.cy.js' --browser chrome --headed --env allure=true",
+    "test-regression": "cypress run --spec 'cypress/e2e/Regression/Regression.cy.js' --browser chrome --headed --env allure=true"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "cypress": "^13.7.0",
+    "rimraf": "^5.0.10"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.36.0"
+  }
+}
