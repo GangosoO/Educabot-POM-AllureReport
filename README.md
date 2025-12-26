@@ -78,6 +78,34 @@ Educabot/
 ├── package.json
 └── README.md
 ```
+## 👨🏽‍💻 Instalación y Configuración de Allure Report en Cypress
+
+1 - Instalación del plugin de Allure
+
+- `npm i -D @shelex/cypress-allure-plugin` 
+
+2 - Configuración en cypress.config.js
+
+-  Importar el writer de Allure para habilitar la generación de resultados durante la ejecución de los tests:
+
+`const allureWriter = require('@shelex/cypress-allure-plugin/writer');` 
+
+-  Dentro de la configuración de E2E, registrar el plugin en el evento setupNodeEvents para que Allure capture los eventos de ejecución:
+
+           allureWriter(on, config);
+           return config; 
+
+3 - Inicialización del plugin en el soporte de Cypress
+
+Registrar el plugin de Allure a nivel global para habilitar los comandos y hooks durante la ejecución de los tests.
+
+Archivo: cypress/support/e2e.js
+
+`import '@shelex/cypress-allure-plugin'`
+
+4 - Instalación de rimraf para limpieza de reportes
+
+`npm install rimraf --save-dev`
 
 ## 🧪 Comando pare ejecutar correctamente el Reporte allure
 
@@ -91,7 +119,7 @@ Educabot/
 
 3 - Ingresar comando despues que termine la ejecucion de las pruebas
 
-- ``npm run allure:report``
+- `npm run allure:report`
 
 ![Allure1](cypress/Imagenes/Allure1.png)
 ![Allure](cypress/Imagenes/Allure.png)
